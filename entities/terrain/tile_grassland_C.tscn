@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://dwn4fqlbshvgs"]
+
+[ext_resource type="PackedScene" uid="uid://ds5or0hyaxaar" path="res://entities/terrain/hex_grass.tscn" id="1_xcrqk"]
+
+[node name="Grassland" type="Node3D"]
+metadata/_edit_lock_ = true
+
+[node name="hex_grass2" parent="." instance=ExtResource("1_xcrqk")]

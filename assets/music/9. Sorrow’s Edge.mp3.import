@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://b4moka6sx7xlb"
+path="res://.godot/imported/9. Sorrow’s Edge.mp3-c351830e68ec61241419a4711d6b997f.mp3str"
+
+[deps]
+
+source_file="res://assets/music/9. Sorrow’s Edge.mp3"
+dest_files=["res://.godot/imported/9. Sorrow’s Edge.mp3-c351830e68ec61241419a4711d6b997f.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

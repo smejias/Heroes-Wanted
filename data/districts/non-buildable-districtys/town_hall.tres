@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="DistrictData" format=3 uid="uid://townhall"]
+
+[ext_resource type="PackedScene" uid="uid://wb0tygscm0jm" path="res://entities/district/town_hall.tscn" id="1_4pgs4"]
+[ext_resource type="Script" uid="uid://v3qrgvl2otge" path="res://data/quest_data.gd" id="1_iidts"]
+[ext_resource type="Script" uid="uid://dklfdyu36y5uf" path="res://data/district_data.gd" id="1_script"]
+
+[resource]
+script = ExtResource("1_script")
+id = &"town_hall"
+display_name = "Town Hall"
+description = "The heart of your settlement. Provides initial building radius."
+scene = ExtResource("1_4pgs4")
+build_radius = 1
+construction_time = 0.0
+gold_production = 10
+quest_spawn_chance = 0.0
+appeal_bonus = 5

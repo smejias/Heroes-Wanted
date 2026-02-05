@@ -1,0 +1,24 @@
+[gd_resource type="Resource" script_class="GameConfig" load_steps=4 format=3 uid="uid://dnu0125flf3by"]
+
+[ext_resource type="Script" uid="uid://rximgr84v10c" path="res://data/appeal_config.gd" id="1_rcbgm"]
+[ext_resource type="Script" uid="uid://bugyeajximwao" path="res://data/game_config.gd" id="2_iovi6"]
+
+[sub_resource type="Resource" id="Resource_5jb1e"]
+script = ExtResource("1_rcbgm")
+base_appeal = 0
+metadata/_custom_type_script = "uid://rximgr84v10c"
+
+[resource]
+script = ExtResource("2_iovi6")
+seconds_per_day = 60.0
+starting_gold = 2000
+food_per_citizen = 1.0
+force_tutorial = false
+base_max_parties = 2
+base_stay_duration = 2
+emissary_travel_hours = 1.0
+emissary_cooldown_hours = 2.0
+appeal_config = SubResource("Resource_5jb1e")
+party_base_cost = 300
+party_cost_per_level = 100
+metadata/_custom_type_script = "uid://bugyeajximwao"

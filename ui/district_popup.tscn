@@ -1,0 +1,211 @@
+[gd_scene load_steps=3 format=3 uid="uid://bsepj7j0bqmqw"]
+
+[ext_resource type="Theme" uid="uid://da13t15ky4gvr" path="res://ui/district_popup.tres" id="1_v5f0w"]
+[ext_resource type="Script" uid="uid://beexrgx0fmque" path="res://ui/district_popup.gd" id="2_1bsdh"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -150.0
+offset_top = -100.0
+offset_right = 150.0
+offset_bottom = 100.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_v5f0w")
+script = ExtResource("2_1bsdh")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -264.0
+offset_top = -149.0
+offset_right = 264.0
+offset_bottom = 149.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="QuestContainer" type="PanelContainer" parent="HBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer/QuestContainer"]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="Title" type="Label" parent="HBoxContainer/QuestContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_font_sizes/font_size = 12
+text = "Active Quest"
+horizontal_alignment = 1
+
+[node name="QuestLabel" type="Label" parent="HBoxContainer/QuestContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 0
+text = "Quest_name"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="QuestDifficultyLabel" type="Label" parent="HBoxContainer/QuestContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_font_sizes/font_size = 12
+text = "quest_difficulty"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="QuestRequirementLabel" type="Label" parent="HBoxContainer/QuestContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_font_sizes/font_size = 12
+text = "quest_partrequierement"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="QuestDescriptionLabel" type="Label" parent="HBoxContainer/QuestContainer/VBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 105)
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_font_sizes/font_size = 10
+text = "Quest_description"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AssignButton" type="Button" parent="HBoxContainer/QuestContainer/VBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(75, 35)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+text = "Assign Heroes"
+
+[node name="MainContainer" type="PanelContainer" parent="HBoxContainer"]
+custom_minimum_size = Vector2(300, 200)
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer/MainContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 5
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer/MainContainer/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="NameLabel" type="Label" parent="HBoxContainer/MainContainer/MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "DISTRICT NAME"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="StateLabel" type="Label" parent="HBoxContainer/MainContainer/MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_font_sizes/font_size = 12
+text = "Working"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="RichTextLabel" type="RichTextLabel" parent="HBoxContainer/MainContainer/MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/normal_font_size = 10
+theme_override_font_sizes/bold_font_size = 10
+theme_override_font_sizes/bold_italics_font_size = 10
+theme_override_font_sizes/italics_font_size = 10
+theme_override_font_sizes/mono_font_size = 10
+text = "lkñmndalñkndkljñanlñkdnañlnsdlñasndlñknalsñdnalsndlñasnsdñlañldnsalñkndmalknmdlkanlkdnalsndlkanldksnaslk"
+fit_content = true
+scroll_active = false
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/MainContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 16
+alignment = 1
+
+[node name="InputContainer" type="VBoxContainer" parent="HBoxContainer/MainContainer/MarginContainer/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+
+[node name="Title" type="Label" parent="HBoxContainer/MainContainer/MarginContainer/VBoxContainer/HBoxContainer/InputContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 12
+text = "Input"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="InputLabel" type="RichTextLabel" parent="HBoxContainer/MainContainer/MarginContainer/VBoxContainer/HBoxContainer/InputContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/normal_font_size = 10
+theme_override_font_sizes/bold_font_size = 10
+theme_override_font_sizes/bold_italics_font_size = 10
+theme_override_font_sizes/italics_font_size = 10
+theme_override_font_sizes/mono_font_size = 10
+bbcode_enabled = true
+text = "15 Materials "
+fit_content = true
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="OutputContainer" type="VBoxContainer" parent="HBoxContainer/MainContainer/MarginContainer/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+
+[node name="Title" type="Label" parent="HBoxContainer/MainContainer/MarginContainer/VBoxContainer/HBoxContainer/OutputContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 12
+text = "Output"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="OutputLabel" type="RichTextLabel" parent="HBoxContainer/MainContainer/MarginContainer/VBoxContainer/HBoxContainer/OutputContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/normal_font_size = 10
+theme_override_font_sizes/bold_font_size = 10
+theme_override_font_sizes/bold_italics_font_size = 10
+theme_override_font_sizes/italics_font_size = 10
+theme_override_font_sizes/mono_font_size = 10
+bbcode_enabled = true
+text = "5 Gold"
+fit_content = true
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="RepairButton" type="Button" parent="HBoxContainer/MainContainer/MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(75, 35)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+text = "Repair"
+
+[node name="CloseButton" type="Button" parent="HBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(20, 25)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+theme_override_font_sizes/font_size = 14
+text = "X"

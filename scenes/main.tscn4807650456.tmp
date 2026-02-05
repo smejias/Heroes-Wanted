@@ -1,0 +1,1432 @@
+[gd_scene load_steps=15 format=3 uid="uid://chjm2wa7uxqss"]
+
+[ext_resource type="Script" uid="uid://dhnbiqnro6k2u" path="res://systems/grid/hex_grid.gd" id="1_grid"]
+[ext_resource type="Resource" uid="uid://townhall" path="res://data/districts/town_hall.tres" id="2_jyhfs"]
+[ext_resource type="PackedScene" uid="uid://htwa4tx6vc76" path="res://entities/tile/tile.tscn" id="2_tile"]
+[ext_resource type="Script" uid="uid://cj0gmkxrvfrhd" path="res://scenes/main_controller.gd" id="3_main"]
+[ext_resource type="PackedScene" uid="uid://dwn4fqlbshvgs" path="res://entities/terrain/tile_grassland_C.tscn" id="4_jyhfs"]
+[ext_resource type="Script" uid="uid://n45d40cqei1k" path="res://systems/lighing/day_night_controller.gd" id="6_o6xl0"]
+[ext_resource type="Script" uid="uid://bst5nboaw1qx5" path="res://systems/camera/camera_controller.gd" id="7_o6xl0"]
+[ext_resource type="Script" uid="uid://djgw0fdsdc52d" path="res://systems/UI/hud.gd" id="8_ya4ey"]
+[ext_resource type="Texture2D" uid="uid://bnicnqona3oxl" path="res://assets/Icons/Pixel Art RPG/Misc/Golden Coin.png" id="9_85g3d"]
+[ext_resource type="Texture2D" uid="uid://ddwyayf0tlavv" path="res://assets/Icons/Pixel Art RPG/Misc/Crate.png" id="10_ya4ey"]
+[ext_resource type="Texture2D" uid="uid://2nok7u2anesl" path="res://assets/Icons/Pixel Art RPG/Food/Bread.png" id="11_eb6dy"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_tefeu"]
+sky_top_color = Color(0.641979, 0.7755985, 0.64685315, 1)
+sky_horizon_color = Color(1.225978, 1.3068283, 1.2701554, 1)
+ground_bottom_color = Color(0.30204988, 0.49183142, 0.47388536, 1)
+ground_horizon_color = Color(1.225978, 1.3068283, 1.2701554, 1)
+energy_multiplier = 0.7
+
+[sub_resource type="Sky" id="Sky_o6xl0"]
+sky_material = SubResource("ProceduralSkyMaterial_tefeu")
+
+[sub_resource type="Environment" id="Environment_tipki"]
+background_mode = 2
+sky = SubResource("Sky_o6xl0")
+tonemap_mode = 2
+glow_enabled = true
+
+[node name="Main" type="Node3D"]
+script = ExtResource("3_main")
+starter_district = ExtResource("2_jyhfs")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_tipki")
+
+[node name="HexGrid" type="Node3D" parent="."]
+script = ExtResource("1_grid")
+grid_radius = 10
+tile_scene = ExtResource("2_tile")
+default_terrain = ExtResource("4_jyhfs")
+
+[node name="Tile_-10_0_10" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15, 0, 8.6602545)
+coord = Vector3i(-10, 0, 10)
+
+[node name="Tile_-10_1_9" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15, 0, 6.928203)
+coord = Vector3i(-10, 1, 9)
+
+[node name="Tile_-10_2_8" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15, 0, 5.196152)
+coord = Vector3i(-10, 2, 8)
+
+[node name="Tile_-10_3_7" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15, 0, 3.4641016)
+coord = Vector3i(-10, 3, 7)
+
+[node name="Tile_-10_4_6" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15, 0, 1.7320508)
+coord = Vector3i(-10, 4, 6)
+
+[node name="Tile_-10_5_5" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15, 0, 0)
+coord = Vector3i(-10, 5, 5)
+
+[node name="Tile_-10_6_4" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15, 0, -1.7320508)
+coord = Vector3i(-10, 6, 4)
+
+[node name="Tile_-10_7_3" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15, 0, -3.4641016)
+coord = Vector3i(-10, 7, 3)
+
+[node name="Tile_-10_8_2" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15, 0, -5.196152)
+coord = Vector3i(-10, 8, 2)
+
+[node name="Tile_-10_9_1" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15, 0, -6.928203)
+coord = Vector3i(-10, 9, 1)
+
+[node name="Tile_-10_10_0" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15, 0, -8.6602545)
+coord = Vector3i(-10, 10, 0)
+
+[node name="Tile_-9_-1_10" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.5, 0, 9.526279)
+coord = Vector3i(-9, -1, 10)
+
+[node name="Tile_-9_0_9" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.5, 0, 7.7942286)
+coord = Vector3i(-9, 0, 9)
+
+[node name="Tile_-9_1_8" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.5, 0, 6.0621777)
+coord = Vector3i(-9, 1, 8)
+
+[node name="Tile_-9_2_7" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.5, 0, 4.3301272)
+coord = Vector3i(-9, 2, 7)
+
+[node name="Tile_-9_3_6" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.5, 0, 2.598076)
+coord = Vector3i(-9, 3, 6)
+
+[node name="Tile_-9_4_5" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.5, 0, 0.8660254)
+coord = Vector3i(-9, 4, 5)
+
+[node name="Tile_-9_5_4" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.5, 0, -0.8660254)
+coord = Vector3i(-9, 5, 4)
+
+[node name="Tile_-9_6_3" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.5, 0, -2.598076)
+coord = Vector3i(-9, 6, 3)
+
+[node name="Tile_-9_7_2" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.5, 0, -4.3301272)
+coord = Vector3i(-9, 7, 2)
+
+[node name="Tile_-9_8_1" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.5, 0, -6.0621777)
+coord = Vector3i(-9, 8, 1)
+
+[node name="Tile_-9_9_0" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.5, 0, -7.7942286)
+coord = Vector3i(-9, 9, 0)
+
+[node name="Tile_-9_10_-1" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.5, 0, -9.526279)
+coord = Vector3i(-9, 10, -1)
+
+[node name="Tile_-8_-2_10" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, 0, 10.392304)
+coord = Vector3i(-8, -2, 10)
+
+[node name="Tile_-8_-1_9" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, 0, 8.6602545)
+coord = Vector3i(-8, -1, 9)
+
+[node name="Tile_-8_0_8" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, 0, 6.928203)
+coord = Vector3i(-8, 0, 8)
+
+[node name="Tile_-8_1_7" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, 0, 5.196152)
+coord = Vector3i(-8, 1, 7)
+
+[node name="Tile_-8_2_6" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, 0, 3.4641016)
+coord = Vector3i(-8, 2, 6)
+
+[node name="Tile_-8_3_5" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, 0, 1.7320508)
+coord = Vector3i(-8, 3, 5)
+
+[node name="Tile_-8_4_4" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, 0, 0)
+coord = Vector3i(-8, 4, 4)
+
+[node name="Tile_-8_5_3" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, 0, -1.7320508)
+coord = Vector3i(-8, 5, 3)
+
+[node name="Tile_-8_6_2" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, 0, -3.4641016)
+coord = Vector3i(-8, 6, 2)
+
+[node name="Tile_-8_7_1" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, 0, -5.196152)
+coord = Vector3i(-8, 7, 1)
+
+[node name="Tile_-8_8_0" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, 0, -6.928203)
+coord = Vector3i(-8, 8, 0)
+
+[node name="Tile_-8_9_-1" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, 0, -8.6602545)
+coord = Vector3i(-8, 9, -1)
+
+[node name="Tile_-8_10_-2" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, 0, -10.392304)
+coord = Vector3i(-8, 10, -2)
+
+[node name="Tile_-7_-3_10" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.5, 0, 11.25833)
+coord = Vector3i(-7, -3, 10)
+
+[node name="Tile_-7_-2_9" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.5, 0, 9.526279)
+coord = Vector3i(-7, -2, 9)
+
+[node name="Tile_-7_-1_8" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.5, 0, 7.7942286)
+coord = Vector3i(-7, -1, 8)
+
+[node name="Tile_-7_0_7" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.5, 0, 6.0621777)
+coord = Vector3i(-7, 0, 7)
+
+[node name="Tile_-7_1_6" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.5, 0, 4.3301272)
+coord = Vector3i(-7, 1, 6)
+
+[node name="Tile_-7_2_5" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.5, 0, 2.598076)
+coord = Vector3i(-7, 2, 5)
+
+[node name="Tile_-7_3_4" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.5, 0, 0.8660254)
+coord = Vector3i(-7, 3, 4)
+
+[node name="Tile_-7_4_3" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.5, 0, -0.8660254)
+coord = Vector3i(-7, 4, 3)
+
+[node name="Tile_-7_5_2" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.5, 0, -2.598076)
+coord = Vector3i(-7, 5, 2)
+
+[node name="Tile_-7_6_1" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.5, 0, -4.3301272)
+coord = Vector3i(-7, 6, 1)
+
+[node name="Tile_-7_7_0" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.5, 0, -6.0621777)
+coord = Vector3i(-7, 7, 0)
+
+[node name="Tile_-7_8_-1" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.5, 0, -7.7942286)
+coord = Vector3i(-7, 8, -1)
+
+[node name="Tile_-7_9_-2" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.5, 0, -9.526279)
+coord = Vector3i(-7, 9, -2)
+
+[node name="Tile_-7_10_-3" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.5, 0, -11.25833)
+coord = Vector3i(-7, 10, -3)
+
+[node name="Tile_-6_-4_10" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 0, 12.124355)
+coord = Vector3i(-6, -4, 10)
+
+[node name="Tile_-6_-3_9" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 0, 10.392304)
+coord = Vector3i(-6, -3, 9)
+
+[node name="Tile_-6_-2_8" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 0, 8.6602545)
+coord = Vector3i(-6, -2, 8)
+
+[node name="Tile_-6_-1_7" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 0, 6.928203)
+coord = Vector3i(-6, -1, 7)
+
+[node name="Tile_-6_0_6" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 0, 5.196152)
+coord = Vector3i(-6, 0, 6)
+
+[node name="Tile_-6_1_5" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 0, 3.4641016)
+coord = Vector3i(-6, 1, 5)
+
+[node name="Tile_-6_2_4" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 0, 1.7320508)
+coord = Vector3i(-6, 2, 4)
+
+[node name="Tile_-6_3_3" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 0, 0)
+coord = Vector3i(-6, 3, 3)
+
+[node name="Tile_-6_4_2" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 0, -1.7320508)
+coord = Vector3i(-6, 4, 2)
+
+[node name="Tile_-6_5_1" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 0, -3.4641016)
+coord = Vector3i(-6, 5, 1)
+
+[node name="Tile_-6_6_0" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 0, -5.196152)
+coord = Vector3i(-6, 6, 0)
+
+[node name="Tile_-6_7_-1" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 0, -6.928203)
+coord = Vector3i(-6, 7, -1)
+
+[node name="Tile_-6_8_-2" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 0, -8.6602545)
+coord = Vector3i(-6, 8, -2)
+
+[node name="Tile_-6_9_-3" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 0, -10.392304)
+coord = Vector3i(-6, 9, -3)
+
+[node name="Tile_-6_10_-4" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 0, -12.124355)
+coord = Vector3i(-6, 10, -4)
+
+[node name="Tile_-5_-5_10" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.5, 0, 12.990381)
+coord = Vector3i(-5, -5, 10)
+
+[node name="Tile_-5_-4_9" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.5, 0, 11.25833)
+coord = Vector3i(-5, -4, 9)
+
+[node name="Tile_-5_-3_8" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.5, 0, 9.526279)
+coord = Vector3i(-5, -3, 8)
+
+[node name="Tile_-5_-2_7" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.5, 0, 7.7942286)
+coord = Vector3i(-5, -2, 7)
+
+[node name="Tile_-5_-1_6" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.5, 0, 6.0621777)
+coord = Vector3i(-5, -1, 6)
+
+[node name="Tile_-5_0_5" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.5, 0, 4.3301272)
+coord = Vector3i(-5, 0, 5)
+
+[node name="Tile_-5_1_4" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.5, 0, 2.598076)
+coord = Vector3i(-5, 1, 4)
+
+[node name="Tile_-5_2_3" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.5, 0, 0.8660254)
+coord = Vector3i(-5, 2, 3)
+
+[node name="Tile_-5_3_2" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.5, 0, -0.8660254)
+coord = Vector3i(-5, 3, 2)
+
+[node name="Tile_-5_4_1" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.5, 0, -2.598076)
+coord = Vector3i(-5, 4, 1)
+
+[node name="Tile_-5_5_0" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.5, 0, -4.3301272)
+coord = Vector3i(-5, 5, 0)
+
+[node name="Tile_-5_6_-1" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.5, 0, -6.0621777)
+coord = Vector3i(-5, 6, -1)
+
+[node name="Tile_-5_7_-2" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.5, 0, -7.7942286)
+coord = Vector3i(-5, 7, -2)
+
+[node name="Tile_-5_8_-3" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.5, 0, -9.526279)
+coord = Vector3i(-5, 8, -3)
+
+[node name="Tile_-5_9_-4" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.5, 0, -11.25833)
+coord = Vector3i(-5, 9, -4)
+
+[node name="Tile_-5_10_-5" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.5, 0, -12.990381)
+coord = Vector3i(-5, 10, -5)
+
+[node name="Tile_-4_-6_10" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, 13.856406)
+coord = Vector3i(-4, -6, 10)
+
+[node name="Tile_-4_-5_9" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, 12.124355)
+coord = Vector3i(-4, -5, 9)
+
+[node name="Tile_-4_-4_8" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, 10.392304)
+coord = Vector3i(-4, -4, 8)
+
+[node name="Tile_-4_-3_7" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, 8.6602545)
+coord = Vector3i(-4, -3, 7)
+
+[node name="Tile_-4_-2_6" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, 6.928203)
+coord = Vector3i(-4, -2, 6)
+
+[node name="Tile_-4_-1_5" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, 5.196152)
+coord = Vector3i(-4, -1, 5)
+
+[node name="Tile_-4_0_4" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, 3.4641016)
+coord = Vector3i(-4, 0, 4)
+
+[node name="Tile_-4_1_3" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, 1.7320508)
+coord = Vector3i(-4, 1, 3)
+
+[node name="Tile_-4_2_2" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, 0)
+coord = Vector3i(-4, 2, 2)
+
+[node name="Tile_-4_3_1" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, -1.7320508)
+coord = Vector3i(-4, 3, 1)
+
+[node name="Tile_-4_4_0" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, -3.4641016)
+coord = Vector3i(-4, 4, 0)
+
+[node name="Tile_-4_5_-1" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, -5.196152)
+coord = Vector3i(-4, 5, -1)
+
+[node name="Tile_-4_6_-2" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, -6.928203)
+coord = Vector3i(-4, 6, -2)
+
+[node name="Tile_-4_7_-3" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, -8.6602545)
+coord = Vector3i(-4, 7, -3)
+
+[node name="Tile_-4_8_-4" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, -10.392304)
+coord = Vector3i(-4, 8, -4)
+
+[node name="Tile_-4_9_-5" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, -12.124355)
+coord = Vector3i(-4, 9, -5)
+
+[node name="Tile_-4_10_-6" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, -13.856406)
+coord = Vector3i(-4, 10, -6)
+
+[node name="Tile_-3_-7_10" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.5, 0, 14.722432)
+coord = Vector3i(-3, -7, 10)
+
+[node name="Tile_-3_-6_9" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.5, 0, 12.990381)
+coord = Vector3i(-3, -6, 9)
+
+[node name="Tile_-3_-5_8" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.5, 0, 11.25833)
+coord = Vector3i(-3, -5, 8)
+
+[node name="Tile_-3_-4_7" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.5, 0, 9.526279)
+coord = Vector3i(-3, -4, 7)
+
+[node name="Tile_-3_-3_6" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.5, 0, 7.7942286)
+coord = Vector3i(-3, -3, 6)
+
+[node name="Tile_-3_-2_5" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.5, 0, 6.0621777)
+coord = Vector3i(-3, -2, 5)
+
+[node name="Tile_-3_-1_4" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.5, 0, 4.3301272)
+coord = Vector3i(-3, -1, 4)
+
+[node name="Tile_-3_0_3" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.5, 0, 2.598076)
+coord = Vector3i(-3, 0, 3)
+
+[node name="Tile_-3_1_2" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.5, 0, 0.8660254)
+coord = Vector3i(-3, 1, 2)
+
+[node name="Tile_-3_2_1" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.5, 0, -0.8660254)
+coord = Vector3i(-3, 2, 1)
+
+[node name="Tile_-3_3_0" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.5, 0, -2.598076)
+coord = Vector3i(-3, 3, 0)
+
+[node name="Tile_-3_4_-1" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.5, 0, -4.3301272)
+coord = Vector3i(-3, 4, -1)
+
+[node name="Tile_-3_5_-2" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.5, 0, -6.0621777)
+coord = Vector3i(-3, 5, -2)
+
+[node name="Tile_-3_6_-3" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.5, 0, -7.7942286)
+coord = Vector3i(-3, 6, -3)
+
+[node name="Tile_-3_7_-4" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.5, 0, -9.526279)
+coord = Vector3i(-3, 7, -4)
+
+[node name="Tile_-3_8_-5" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.5, 0, -11.25833)
+coord = Vector3i(-3, 8, -5)
+
+[node name="Tile_-3_9_-6" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.5, 0, -12.990381)
+coord = Vector3i(-3, 9, -6)
+
+[node name="Tile_-3_10_-7" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.5, 0, -14.722432)
+coord = Vector3i(-3, 10, -7)
+
+[node name="Tile_-2_-8_10" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, 15.588457)
+coord = Vector3i(-2, -8, 10)
+
+[node name="Tile_-2_-7_9" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, 13.856406)
+coord = Vector3i(-2, -7, 9)
+
+[node name="Tile_-2_-6_8" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, 12.124355)
+coord = Vector3i(-2, -6, 8)
+
+[node name="Tile_-2_-5_7" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, 10.392304)
+coord = Vector3i(-2, -5, 7)
+
+[node name="Tile_-2_-4_6" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, 8.6602545)
+coord = Vector3i(-2, -4, 6)
+
+[node name="Tile_-2_-3_5" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, 6.928203)
+coord = Vector3i(-2, -3, 5)
+
+[node name="Tile_-2_-2_4" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, 5.196152)
+coord = Vector3i(-2, -2, 4)
+
+[node name="Tile_-2_-1_3" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, 3.4641016)
+coord = Vector3i(-2, -1, 3)
+
+[node name="Tile_-2_0_2" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, 1.7320508)
+coord = Vector3i(-2, 0, 2)
+
+[node name="Tile_-2_1_1" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, 0)
+coord = Vector3i(-2, 1, 1)
+
+[node name="Tile_-2_2_0" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, -1.7320508)
+coord = Vector3i(-2, 2, 0)
+
+[node name="Tile_-2_3_-1" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, -3.4641016)
+coord = Vector3i(-2, 3, -1)
+
+[node name="Tile_-2_4_-2" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, -5.196152)
+coord = Vector3i(-2, 4, -2)
+
+[node name="Tile_-2_5_-3" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, -6.928203)
+coord = Vector3i(-2, 5, -3)
+
+[node name="Tile_-2_6_-4" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, -8.6602545)
+coord = Vector3i(-2, 6, -4)
+
+[node name="Tile_-2_7_-5" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, -10.392304)
+coord = Vector3i(-2, 7, -5)
+
+[node name="Tile_-2_8_-6" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, -12.124355)
+coord = Vector3i(-2, 8, -6)
+
+[node name="Tile_-2_9_-7" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, -13.856406)
+coord = Vector3i(-2, 9, -7)
+
+[node name="Tile_-2_10_-8" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, -15.588457)
+coord = Vector3i(-2, 10, -8)
+
+[node name="Tile_-1_-9_10" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 0, 16.454483)
+coord = Vector3i(-1, -9, 10)
+
+[node name="Tile_-1_-8_9" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 0, 14.722432)
+coord = Vector3i(-1, -8, 9)
+
+[node name="Tile_-1_-7_8" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 0, 12.990381)
+coord = Vector3i(-1, -7, 8)
+
+[node name="Tile_-1_-6_7" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 0, 11.25833)
+coord = Vector3i(-1, -6, 7)
+
+[node name="Tile_-1_-5_6" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 0, 9.526279)
+coord = Vector3i(-1, -5, 6)
+
+[node name="Tile_-1_-4_5" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 0, 7.7942286)
+coord = Vector3i(-1, -4, 5)
+
+[node name="Tile_-1_-3_4" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 0, 6.0621777)
+coord = Vector3i(-1, -3, 4)
+
+[node name="Tile_-1_-2_3" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 0, 4.3301272)
+coord = Vector3i(-1, -2, 3)
+
+[node name="Tile_-1_-1_2" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 0, 2.598076)
+coord = Vector3i(-1, -1, 2)
+
+[node name="Tile_-1_0_1" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 0, 0.8660254)
+coord = Vector3i(-1, 0, 1)
+
+[node name="Tile_-1_1_0" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 0, -0.8660254)
+coord = Vector3i(-1, 1, 0)
+
+[node name="Tile_-1_2_-1" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 0, -2.598076)
+coord = Vector3i(-1, 2, -1)
+
+[node name="Tile_-1_3_-2" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 0, -4.3301272)
+coord = Vector3i(-1, 3, -2)
+
+[node name="Tile_-1_4_-3" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 0, -6.0621777)
+coord = Vector3i(-1, 4, -3)
+
+[node name="Tile_-1_5_-4" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 0, -7.7942286)
+coord = Vector3i(-1, 5, -4)
+
+[node name="Tile_-1_6_-5" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 0, -9.526279)
+coord = Vector3i(-1, 6, -5)
+
+[node name="Tile_-1_7_-6" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 0, -11.25833)
+coord = Vector3i(-1, 7, -6)
+
+[node name="Tile_-1_8_-7" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 0, -12.990381)
+coord = Vector3i(-1, 8, -7)
+
+[node name="Tile_-1_9_-8" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 0, -14.722432)
+coord = Vector3i(-1, 9, -8)
+
+[node name="Tile_-1_10_-9" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 0, -16.454483)
+coord = Vector3i(-1, 10, -9)
+
+[node name="Tile_0_-10_10" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 17.320509)
+coord = Vector3i(0, -10, 10)
+
+[node name="Tile_0_-9_9" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 15.588457)
+coord = Vector3i(0, -9, 9)
+
+[node name="Tile_0_-8_8" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 13.856406)
+coord = Vector3i(0, -8, 8)
+
+[node name="Tile_0_-7_7" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 12.124355)
+coord = Vector3i(0, -7, 7)
+
+[node name="Tile_0_-6_6" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 10.392304)
+coord = Vector3i(0, -6, 6)
+
+[node name="Tile_0_-5_5" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 8.6602545)
+coord = Vector3i(0, -5, 5)
+
+[node name="Tile_0_-4_4" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 6.928203)
+coord = Vector3i(0, -4, 4)
+
+[node name="Tile_0_-3_3" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 5.196152)
+coord = Vector3i(0, -3, 3)
+
+[node name="Tile_0_-2_2" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3.4641016)
+coord = Vector3i(0, -2, 2)
+
+[node name="Tile_0_-1_1" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.7320508)
+coord = Vector3i(0, -1, 1)
+
+[node name="Tile_0_0_0" parent="HexGrid" instance=ExtResource("2_tile")]
+
+[node name="Tile_0_1_-1" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1.7320508)
+coord = Vector3i(0, 1, -1)
+
+[node name="Tile_0_2_-2" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -3.4641016)
+coord = Vector3i(0, 2, -2)
+
+[node name="Tile_0_3_-3" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -5.196152)
+coord = Vector3i(0, 3, -3)
+
+[node name="Tile_0_4_-4" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -6.928203)
+coord = Vector3i(0, 4, -4)
+
+[node name="Tile_0_5_-5" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -8.6602545)
+coord = Vector3i(0, 5, -5)
+
+[node name="Tile_0_6_-6" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -10.392304)
+coord = Vector3i(0, 6, -6)
+
+[node name="Tile_0_7_-7" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -12.124355)
+coord = Vector3i(0, 7, -7)
+
+[node name="Tile_0_8_-8" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -13.856406)
+coord = Vector3i(0, 8, -8)
+
+[node name="Tile_0_9_-9" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -15.588457)
+coord = Vector3i(0, 9, -9)
+
+[node name="Tile_0_10_-10" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -17.320509)
+coord = Vector3i(0, 10, -10)
+
+[node name="Tile_1_-10_9" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 0, 16.454483)
+coord = Vector3i(1, -10, 9)
+
+[node name="Tile_1_-9_8" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 0, 14.722432)
+coord = Vector3i(1, -9, 8)
+
+[node name="Tile_1_-8_7" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 0, 12.990381)
+coord = Vector3i(1, -8, 7)
+
+[node name="Tile_1_-7_6" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 0, 11.25833)
+coord = Vector3i(1, -7, 6)
+
+[node name="Tile_1_-6_5" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 0, 9.526279)
+coord = Vector3i(1, -6, 5)
+
+[node name="Tile_1_-5_4" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 0, 7.7942286)
+coord = Vector3i(1, -5, 4)
+
+[node name="Tile_1_-4_3" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 0, 6.0621777)
+coord = Vector3i(1, -4, 3)
+
+[node name="Tile_1_-3_2" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 0, 4.3301272)
+coord = Vector3i(1, -3, 2)
+
+[node name="Tile_1_-2_1" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 0, 2.598076)
+coord = Vector3i(1, -2, 1)
+
+[node name="Tile_1_-1_0" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 0, 0.8660254)
+coord = Vector3i(1, -1, 0)
+
+[node name="Tile_1_0_-1" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 0, -0.8660254)
+coord = Vector3i(1, 0, -1)
+
+[node name="Tile_1_1_-2" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 0, -2.598076)
+coord = Vector3i(1, 1, -2)
+
+[node name="Tile_1_2_-3" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 0, -4.3301272)
+coord = Vector3i(1, 2, -3)
+
+[node name="Tile_1_3_-4" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 0, -6.0621777)
+coord = Vector3i(1, 3, -4)
+
+[node name="Tile_1_4_-5" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 0, -7.7942286)
+coord = Vector3i(1, 4, -5)
+
+[node name="Tile_1_5_-6" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 0, -9.526279)
+coord = Vector3i(1, 5, -6)
+
+[node name="Tile_1_6_-7" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 0, -11.25833)
+coord = Vector3i(1, 6, -7)
+
+[node name="Tile_1_7_-8" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 0, -12.990381)
+coord = Vector3i(1, 7, -8)
+
+[node name="Tile_1_8_-9" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 0, -14.722432)
+coord = Vector3i(1, 8, -9)
+
+[node name="Tile_1_9_-10" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 0, -16.454483)
+coord = Vector3i(1, 9, -10)
+
+[node name="Tile_2_-10_8" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 15.588457)
+coord = Vector3i(2, -10, 8)
+
+[node name="Tile_2_-9_7" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 13.856406)
+coord = Vector3i(2, -9, 7)
+
+[node name="Tile_2_-8_6" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 12.124355)
+coord = Vector3i(2, -8, 6)
+
+[node name="Tile_2_-7_5" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 10.392304)
+coord = Vector3i(2, -7, 5)
+
+[node name="Tile_2_-6_4" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 8.6602545)
+coord = Vector3i(2, -6, 4)
+
+[node name="Tile_2_-5_3" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 6.928203)
+coord = Vector3i(2, -5, 3)
+
+[node name="Tile_2_-4_2" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 5.196152)
+coord = Vector3i(2, -4, 2)
+
+[node name="Tile_2_-3_1" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 3.4641016)
+coord = Vector3i(2, -3, 1)
+
+[node name="Tile_2_-2_0" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 1.7320508)
+coord = Vector3i(2, -2, 0)
+
+[node name="Tile_2_-1_-1" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 0)
+coord = Vector3i(2, -1, -1)
+
+[node name="Tile_2_0_-2" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -1.7320508)
+coord = Vector3i(2, 0, -2)
+
+[node name="Tile_2_1_-3" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -3.4641016)
+coord = Vector3i(2, 1, -3)
+
+[node name="Tile_2_2_-4" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -5.196152)
+coord = Vector3i(2, 2, -4)
+
+[node name="Tile_2_3_-5" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -6.928203)
+coord = Vector3i(2, 3, -5)
+
+[node name="Tile_2_4_-6" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -8.6602545)
+coord = Vector3i(2, 4, -6)
+
+[node name="Tile_2_5_-7" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -10.392304)
+coord = Vector3i(2, 5, -7)
+
+[node name="Tile_2_6_-8" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -12.124355)
+coord = Vector3i(2, 6, -8)
+
+[node name="Tile_2_7_-9" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -13.856406)
+coord = Vector3i(2, 7, -9)
+
+[node name="Tile_2_8_-10" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -15.588457)
+coord = Vector3i(2, 8, -10)
+
+[node name="Tile_3_-10_7" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.5, 0, 14.722432)
+coord = Vector3i(3, -10, 7)
+
+[node name="Tile_3_-9_6" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.5, 0, 12.990381)
+coord = Vector3i(3, -9, 6)
+
+[node name="Tile_3_-8_5" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.5, 0, 11.25833)
+coord = Vector3i(3, -8, 5)
+
+[node name="Tile_3_-7_4" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.5, 0, 9.526279)
+coord = Vector3i(3, -7, 4)
+
+[node name="Tile_3_-6_3" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.5, 0, 7.7942286)
+coord = Vector3i(3, -6, 3)
+
+[node name="Tile_3_-5_2" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.5, 0, 6.0621777)
+coord = Vector3i(3, -5, 2)
+
+[node name="Tile_3_-4_1" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.5, 0, 4.3301272)
+coord = Vector3i(3, -4, 1)
+
+[node name="Tile_3_-3_0" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.5, 0, 2.598076)
+coord = Vector3i(3, -3, 0)
+
+[node name="Tile_3_-2_-1" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.5, 0, 0.8660254)
+coord = Vector3i(3, -2, -1)
+
+[node name="Tile_3_-1_-2" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.5, 0, -0.8660254)
+coord = Vector3i(3, -1, -2)
+
+[node name="Tile_3_0_-3" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.5, 0, -2.598076)
+coord = Vector3i(3, 0, -3)
+
+[node name="Tile_3_1_-4" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.5, 0, -4.3301272)
+coord = Vector3i(3, 1, -4)
+
+[node name="Tile_3_2_-5" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.5, 0, -6.0621777)
+coord = Vector3i(3, 2, -5)
+
+[node name="Tile_3_3_-6" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.5, 0, -7.7942286)
+coord = Vector3i(3, 3, -6)
+
+[node name="Tile_3_4_-7" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.5, 0, -9.526279)
+coord = Vector3i(3, 4, -7)
+
+[node name="Tile_3_5_-8" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.5, 0, -11.25833)
+coord = Vector3i(3, 5, -8)
+
+[node name="Tile_3_6_-9" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.5, 0, -12.990381)
+coord = Vector3i(3, 6, -9)
+
+[node name="Tile_3_7_-10" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.5, 0, -14.722432)
+coord = Vector3i(3, 7, -10)
+
+[node name="Tile_4_-10_6" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 13.856406)
+coord = Vector3i(4, -10, 6)
+
+[node name="Tile_4_-9_5" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 12.124355)
+coord = Vector3i(4, -9, 5)
+
+[node name="Tile_4_-8_4" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 10.392304)
+coord = Vector3i(4, -8, 4)
+
+[node name="Tile_4_-7_3" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 8.6602545)
+coord = Vector3i(4, -7, 3)
+
+[node name="Tile_4_-6_2" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 6.928203)
+coord = Vector3i(4, -6, 2)
+
+[node name="Tile_4_-5_1" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 5.196152)
+coord = Vector3i(4, -5, 1)
+
+[node name="Tile_4_-4_0" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 3.4641016)
+coord = Vector3i(4, -4, 0)
+
+[node name="Tile_4_-3_-1" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 1.7320508)
+coord = Vector3i(4, -3, -1)
+
+[node name="Tile_4_-2_-2" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 0)
+coord = Vector3i(4, -2, -2)
+
+[node name="Tile_4_-1_-3" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, -1.7320508)
+coord = Vector3i(4, -1, -3)
+
+[node name="Tile_4_0_-4" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, -3.4641016)
+coord = Vector3i(4, 0, -4)
+
+[node name="Tile_4_1_-5" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, -5.196152)
+coord = Vector3i(4, 1, -5)
+
+[node name="Tile_4_2_-6" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, -6.928203)
+coord = Vector3i(4, 2, -6)
+
+[node name="Tile_4_3_-7" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, -8.6602545)
+coord = Vector3i(4, 3, -7)
+
+[node name="Tile_4_4_-8" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, -10.392304)
+coord = Vector3i(4, 4, -8)
+
+[node name="Tile_4_5_-9" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, -12.124355)
+coord = Vector3i(4, 5, -9)
+
+[node name="Tile_4_6_-10" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, -13.856406)
+coord = Vector3i(4, 6, -10)
+
+[node name="Tile_5_-10_5" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.5, 0, 12.990381)
+coord = Vector3i(5, -10, 5)
+
+[node name="Tile_5_-9_4" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.5, 0, 11.25833)
+coord = Vector3i(5, -9, 4)
+
+[node name="Tile_5_-8_3" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.5, 0, 9.526279)
+coord = Vector3i(5, -8, 3)
+
+[node name="Tile_5_-7_2" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.5, 0, 7.7942286)
+coord = Vector3i(5, -7, 2)
+
+[node name="Tile_5_-6_1" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.5, 0, 6.0621777)
+coord = Vector3i(5, -6, 1)
+
+[node name="Tile_5_-5_0" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.5, 0, 4.3301272)
+coord = Vector3i(5, -5, 0)
+
+[node name="Tile_5_-4_-1" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.5, 0, 2.598076)
+coord = Vector3i(5, -4, -1)
+
+[node name="Tile_5_-3_-2" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.5, 0, 0.8660254)
+coord = Vector3i(5, -3, -2)
+
+[node name="Tile_5_-2_-3" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.5, 0, -0.8660254)
+coord = Vector3i(5, -2, -3)
+
+[node name="Tile_5_-1_-4" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.5, 0, -2.598076)
+coord = Vector3i(5, -1, -4)
+
+[node name="Tile_5_0_-5" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.5, 0, -4.3301272)
+coord = Vector3i(5, 0, -5)
+
+[node name="Tile_5_1_-6" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.5, 0, -6.0621777)
+coord = Vector3i(5, 1, -6)
+
+[node name="Tile_5_2_-7" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.5, 0, -7.7942286)
+coord = Vector3i(5, 2, -7)
+
+[node name="Tile_5_3_-8" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.5, 0, -9.526279)
+coord = Vector3i(5, 3, -8)
+
+[node name="Tile_5_4_-9" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.5, 0, -11.25833)
+coord = Vector3i(5, 4, -9)
+
+[node name="Tile_5_5_-10" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.5, 0, -12.990381)
+coord = Vector3i(5, 5, -10)
+
+[node name="Tile_6_-10_4" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 0, 12.124355)
+coord = Vector3i(6, -10, 4)
+
+[node name="Tile_6_-9_3" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 0, 10.392304)
+coord = Vector3i(6, -9, 3)
+
+[node name="Tile_6_-8_2" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 0, 8.6602545)
+coord = Vector3i(6, -8, 2)
+
+[node name="Tile_6_-7_1" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 0, 6.928203)
+coord = Vector3i(6, -7, 1)
+
+[node name="Tile_6_-6_0" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 0, 5.196152)
+coord = Vector3i(6, -6, 0)
+
+[node name="Tile_6_-5_-1" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 0, 3.4641016)
+coord = Vector3i(6, -5, -1)
+
+[node name="Tile_6_-4_-2" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 0, 1.7320508)
+coord = Vector3i(6, -4, -2)
+
+[node name="Tile_6_-3_-3" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 0, 0)
+coord = Vector3i(6, -3, -3)
+
+[node name="Tile_6_-2_-4" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 0, -1.7320508)
+coord = Vector3i(6, -2, -4)
+
+[node name="Tile_6_-1_-5" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 0, -3.4641016)
+coord = Vector3i(6, -1, -5)
+
+[node name="Tile_6_0_-6" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 0, -5.196152)
+coord = Vector3i(6, 0, -6)
+
+[node name="Tile_6_1_-7" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 0, -6.928203)
+coord = Vector3i(6, 1, -7)
+
+[node name="Tile_6_2_-8" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 0, -8.6602545)
+coord = Vector3i(6, 2, -8)
+
+[node name="Tile_6_3_-9" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 0, -10.392304)
+coord = Vector3i(6, 3, -9)
+
+[node name="Tile_6_4_-10" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 0, -12.124355)
+coord = Vector3i(6, 4, -10)
+
+[node name="Tile_7_-10_3" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.5, 0, 11.25833)
+coord = Vector3i(7, -10, 3)
+
+[node name="Tile_7_-9_2" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.5, 0, 9.526279)
+coord = Vector3i(7, -9, 2)
+
+[node name="Tile_7_-8_1" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.5, 0, 7.7942286)
+coord = Vector3i(7, -8, 1)
+
+[node name="Tile_7_-7_0" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.5, 0, 6.0621777)
+coord = Vector3i(7, -7, 0)
+
+[node name="Tile_7_-6_-1" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.5, 0, 4.3301272)
+coord = Vector3i(7, -6, -1)
+
+[node name="Tile_7_-5_-2" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.5, 0, 2.598076)
+coord = Vector3i(7, -5, -2)
+
+[node name="Tile_7_-4_-3" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.5, 0, 0.8660254)
+coord = Vector3i(7, -4, -3)
+
+[node name="Tile_7_-3_-4" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.5, 0, -0.8660254)
+coord = Vector3i(7, -3, -4)
+
+[node name="Tile_7_-2_-5" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.5, 0, -2.598076)
+coord = Vector3i(7, -2, -5)
+
+[node name="Tile_7_-1_-6" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.5, 0, -4.3301272)
+coord = Vector3i(7, -1, -6)
+
+[node name="Tile_7_0_-7" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.5, 0, -6.0621777)
+coord = Vector3i(7, 0, -7)
+
+[node name="Tile_7_1_-8" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.5, 0, -7.7942286)
+coord = Vector3i(7, 1, -8)
+
+[node name="Tile_7_2_-9" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.5, 0, -9.526279)
+coord = Vector3i(7, 2, -9)
+
+[node name="Tile_7_3_-10" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.5, 0, -11.25833)
+coord = Vector3i(7, 3, -10)
+
+[node name="Tile_8_-10_2" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, 10.392304)
+coord = Vector3i(8, -10, 2)
+
+[node name="Tile_8_-9_1" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, 8.6602545)
+coord = Vector3i(8, -9, 1)
+
+[node name="Tile_8_-8_0" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, 6.928203)
+coord = Vector3i(8, -8, 0)
+
+[node name="Tile_8_-7_-1" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, 5.196152)
+coord = Vector3i(8, -7, -1)
+
+[node name="Tile_8_-6_-2" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, 3.4641016)
+coord = Vector3i(8, -6, -2)
+
+[node name="Tile_8_-5_-3" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, 1.7320508)
+coord = Vector3i(8, -5, -3)
+
+[node name="Tile_8_-4_-4" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, 0)
+coord = Vector3i(8, -4, -4)
+
+[node name="Tile_8_-3_-5" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, -1.7320508)
+coord = Vector3i(8, -3, -5)
+
+[node name="Tile_8_-2_-6" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, -3.4641016)
+coord = Vector3i(8, -2, -6)
+
+[node name="Tile_8_-1_-7" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, -5.196152)
+coord = Vector3i(8, -1, -7)
+
+[node name="Tile_8_0_-8" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, -6.928203)
+coord = Vector3i(8, 0, -8)
+
+[node name="Tile_8_1_-9" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, -8.6602545)
+coord = Vector3i(8, 1, -9)
+
+[node name="Tile_8_2_-10" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, -10.392304)
+coord = Vector3i(8, 2, -10)
+
+[node name="Tile_9_-10_1" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.5, 0, 9.526279)
+coord = Vector3i(9, -10, 1)
+
+[node name="Tile_9_-9_0" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.5, 0, 7.7942286)
+coord = Vector3i(9, -9, 0)
+
+[node name="Tile_9_-8_-1" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.5, 0, 6.0621777)
+coord = Vector3i(9, -8, -1)
+
+[node name="Tile_9_-7_-2" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.5, 0, 4.3301272)
+coord = Vector3i(9, -7, -2)
+
+[node name="Tile_9_-6_-3" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.5, 0, 2.598076)
+coord = Vector3i(9, -6, -3)
+
+[node name="Tile_9_-5_-4" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.5, 0, 0.8660254)
+coord = Vector3i(9, -5, -4)
+
+[node name="Tile_9_-4_-5" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.5, 0, -0.8660254)
+coord = Vector3i(9, -4, -5)
+
+[node name="Tile_9_-3_-6" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.5, 0, -2.598076)
+coord = Vector3i(9, -3, -6)
+
+[node name="Tile_9_-2_-7" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.5, 0, -4.3301272)
+coord = Vector3i(9, -2, -7)
+
+[node name="Tile_9_-1_-8" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.5, 0, -6.0621777)
+coord = Vector3i(9, -1, -8)
+
+[node name="Tile_9_0_-9" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.5, 0, -7.7942286)
+coord = Vector3i(9, 0, -9)
+
+[node name="Tile_9_1_-10" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.5, 0, -9.526279)
+coord = Vector3i(9, 1, -10)
+
+[node name="Tile_10_-10_0" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 0, 8.6602545)
+coord = Vector3i(10, -10, 0)
+
+[node name="Tile_10_-9_-1" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 0, 6.928203)
+coord = Vector3i(10, -9, -1)
+
+[node name="Tile_10_-8_-2" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 0, 5.196152)
+coord = Vector3i(10, -8, -2)
+
+[node name="Tile_10_-7_-3" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 0, 3.4641016)
+coord = Vector3i(10, -7, -3)
+
+[node name="Tile_10_-6_-4" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 0, 1.7320508)
+coord = Vector3i(10, -6, -4)
+
+[node name="Tile_10_-5_-5" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 0, 0)
+coord = Vector3i(10, -5, -5)
+
+[node name="Tile_10_-4_-6" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 0, -1.7320508)
+coord = Vector3i(10, -4, -6)
+
+[node name="Tile_10_-3_-7" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 0, -3.4641016)
+coord = Vector3i(10, -3, -7)
+
+[node name="Tile_10_-2_-8" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 0, -5.196152)
+coord = Vector3i(10, -2, -8)
+
+[node name="Tile_10_-1_-9" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 0, -6.928203)
+coord = Vector3i(10, -1, -9)
+
+[node name="Tile_10_0_-10" parent="HexGrid" instance=ExtResource("2_tile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 0, -8.6602545)
+coord = Vector3i(10, 0, -10)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.707107, 0.707107, 0, -0.707107, 0.707107, 0, 10, 0)
+shadow_enabled = true
+script = ExtResource("6_o6xl0")
+
+[node name="CameraRig" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.50000024, 0.8660253, 0, -0.8660253, 0.50000024, 0, 26.483038, 15)
+script = ExtResource("7_o6xl0")
+
+[node name="Camera3D" type="Camera3D" parent="CameraRig"]
+fov = 50.0
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+script = ExtResource("8_ya4ey")
+
+[node name="Control" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Resources" type="HBoxContainer" parent="CanvasLayer/Control"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="GoldContainer" type="HBoxContainer" parent="CanvasLayer/Control/Resources"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/Control/Resources/GoldContainer"]
+layout_mode = 2
+texture = ExtResource("9_85g3d")
+expand_mode = 3
+stretch_mode = 4
+
+[node name="GoldLabel" type="Label" parent="CanvasLayer/Control/Resources/GoldContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "99999"
+
+[node name="MaterialsContainer" type="HBoxContainer" parent="CanvasLayer/Control/Resources"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/Control/Resources/MaterialsContainer"]
+layout_mode = 2
+texture = ExtResource("10_ya4ey")
+expand_mode = 3
+stretch_mode = 4
+
+[node name="MaterialsLabel" type="Label" parent="CanvasLayer/Control/Resources/MaterialsContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "99999"
+
+[node name="FoodContainer" type="HBoxContainer" parent="CanvasLayer/Control/Resources"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/Control/Resources/FoodContainer"]
+layout_mode = 2
+texture = ExtResource("11_eb6dy")
+expand_mode = 3
+stretch_mode = 4
+
+[node name="FoodLabel" type="Label" parent="CanvasLayer/Control/Resources/FoodContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "99999"

@@ -1,0 +1,20 @@
+[gd_scene load_steps=5 format=3 uid="uid://sbks4dbyphl3"]
+
+[ext_resource type="PackedScene" uid="uid://co6i0upugqh2p" path="res://assets/tiles-hexes/models/hex_grass.gltf" id="1_tdw43"]
+[ext_resource type="PackedScene" uid="uid://bavrd8jf2mn2l" path="res://assets/nature/rock_single_B.gltf" id="2_hdifu"]
+[ext_resource type="PackedScene" uid="uid://cd84m5tlsq81v" path="res://assets/nature/rock_single_A.gltf" id="3_vl4wg"]
+[ext_resource type="PackedScene" uid="uid://c06g1ag65q1mb" path="res://assets/nature/tree_single_A.gltf" id="4_0ktcu"]
+
+[node name="Grassland" type="Node3D"]
+
+[node name="hex_grass2" parent="." instance=ExtResource("1_tdw43")]
+transform = Transform3D(0.8660254, 0, 0.5, 0, 1, 0, -0.5, 0, 0.8660254, 0, 0, 0)
+
+[node name="rock_single_B2" parent="." instance=ExtResource("2_hdifu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.40897554, 0, -0.53609896)
+
+[node name="rock_single_A2" parent="." instance=ExtResource("3_vl4wg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.6302119, 0, -0.26119304)
+
+[node name="tree_single_A2" parent="." instance=ExtResource("4_0ktcu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.18733338, 0, -0.2646489)

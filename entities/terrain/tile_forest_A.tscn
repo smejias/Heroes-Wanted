@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://d2hxcu6fuawl5"]
+
+[ext_resource type="PackedScene" uid="uid://co6i0upugqh2p" path="res://assets/tiles-hexes/models/hex_grass.gltf" id="1_i56rc"]
+[ext_resource type="PackedScene" uid="uid://cbl41xs4pdyxx" path="res://assets/nature/hills_C_trees.gltf" id="2_hvw1e"]
+
+[node name="Forest" type="Node3D"]
+transform = Transform3D(0.8660254, 0, 0.5, 0, 1, 0, -0.5, 0, 0.8660254, 0, 0, 0)
+
+[node name="hex_grass2" parent="." instance=ExtResource("1_i56rc")]
+
+[node name="hills_C_trees2" parent="." instance=ExtResource("2_hvw1e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.08122752, 0, 0.005134344)

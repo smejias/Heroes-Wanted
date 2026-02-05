@@ -1,0 +1,12 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://qh45ngp2x7cv"]
+
+[ext_resource type="Shader" uid="uid://bxsfmulekl3dh" path="res://assets/shaders/grass/grass_blade_shader.gdshader" id="1_i8mph"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_i8mph")
+shader_parameter/color_base = Color(0.15, 0.4, 0.1, 1)
+shader_parameter/color_tip = Color(0.4, 0.75, 0.2, 1)
+shader_parameter/wind_direction = Vector2(1, 0.5)
+shader_parameter/wind_speed = 0.02
+shader_parameter/sway_strength = 2.0

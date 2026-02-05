@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://drnhxq1ubidkb"]
+
+[ext_resource type="PackedScene" uid="uid://do8yoy5wikfqk" path="res://assets/buildings/blue/building_market_blue.gltf" id="1_m33i2"]
+
+[node name="Market" type="Node3D"]
+
+[node name="building_market_blue2" parent="." instance=ExtResource("1_m33i2")]
+transform = Transform3D(0.8660254, 0, 0.5, 0, 1, 0, -0.5, 0, 0.8660254, 0, 0, 0)

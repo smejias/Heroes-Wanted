@@ -1,0 +1,7 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://c14bpjc52t4kk"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_v0up2"]
+load_path = "res://.godot/imported/hexagons_medieval.png-2cbed26386bf7d9a7d94014e2bbcf574.s3tc.ctex"
+
+[resource]
+albedo_texture = SubResource("CompressedTexture2D_v0up2")

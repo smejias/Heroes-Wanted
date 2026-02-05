@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="AppealConfig" load_steps=2 format=3 uid="uid://dui57xqkyvjfh"]
+
+[ext_resource type="Script" uid="uid://rximgr84v10c" path="res://data/appeal_config.gd" id="1_2luqp"]
+
+[resource]
+script = ExtResource("1_2luqp")
+metadata/_custom_type_script = "uid://rximgr84v10c"

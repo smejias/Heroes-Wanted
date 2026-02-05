@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="DistrictData" format=3 uid="uid://farm"]
+
+[ext_resource type="Script" uid="uid://v3qrgvl2otge" path="res://data/quest_data.gd" id="1_natq3"]
+[ext_resource type="Script" uid="uid://dklfdyu36y5uf" path="res://data/district_data.gd" id="1_script"]
+[ext_resource type="PackedScene" uid="uid://53ih7c47djjc" path="res://entities/district/farm.tscn" id="1_vm7ye"]
+
+[resource]
+script = ExtResource("1_script")
+id = &"farm"
+display_name = "Farm"
+description = "Produces food for your population."
+type = 2
+scene = ExtResource("1_vm7ye")
+build_radius = 1
+gold_cost = 80
+materials_cost = 30
+food_production = 15
+quest_spawn_chance = 0.25
+appeal_bonus = 2
+has_terrain_requirement = true

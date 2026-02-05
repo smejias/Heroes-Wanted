@@ -1,0 +1,45 @@
+[gd_scene load_steps=9 format=3 uid="uid://d3xpf5kc06fpj"]
+
+[ext_resource type="PackedScene" uid="uid://clv1ygllgkg0w" path="res://assets/buildings/blue/building_tavern_blue.gltf" id="1_4yp6g"]
+[ext_resource type="PackedScene" uid="uid://b8t0pkcwxi82w" path="res://assets/props/barrel.gltf" id="2_idf0n"]
+[ext_resource type="PackedScene" uid="uid://c3yasyrdpru2" path="res://assets/props/crate_long_C.gltf" id="3_80h62"]
+[ext_resource type="PackedScene" uid="uid://buslaegq0hvxs" path="res://assets/props/crate_B_big.gltf" id="4_amkhm"]
+[ext_resource type="PackedScene" uid="uid://c5s3kptvonaef" path="res://assets/props/crate_A_small.gltf" id="5_m5gs4"]
+[ext_resource type="PackedScene" uid="uid://cyavfu0bgowbc" path="res://assets/props/trough_long.gltf" id="6_jgcfn"]
+[ext_resource type="PackedScene" uid="uid://c06g1ag65q1mb" path="res://assets/nature/tree_single_A.gltf" id="7_ug1nn"]
+[ext_resource type="PackedScene" uid="uid://cd5v4hpfjfe40" path="res://assets/nature/tree_single_A_cut.gltf" id="8_0503g"]
+
+[node name="Tavern" type="Node3D"]
+transform = Transform3D(0.8660254, 0, 0.5, 0, 1, 0, -0.5, 0, 0.8660254, 0, 0, 0)
+
+[node name="building_tavern_blue2" parent="." instance=ExtResource("1_4yp6g")]
+
+[node name="barrel2" parent="." instance=ExtResource("2_idf0n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.46781784, 0, 0.59056526)
+
+[node name="barrel3" parent="." instance=ExtResource("2_idf0n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.6266645, 0, 0.4174125)
+
+[node name="crate_long_C2" parent="." instance=ExtResource("3_80h62")]
+transform = Transform3D(0.44206947, 0, -0.8969808, 0, 1, 0, 0.8969808, 0, 0.44206947, -0.69668174, 0, -0.28185642)
+
+[node name="crate_B_big2" parent="." instance=ExtResource("4_amkhm")]
+transform = Transform3D(0.9638633, 0, -0.26639736, 0, 1, 0, 0.26639736, 0, 0.9638633, 0.69236374, 0, 0)
+
+[node name="crate_B_big3" parent="." instance=ExtResource("4_amkhm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.69236374, 0, -0.26373655)
+
+[node name="crate_A_small2" parent="." instance=ExtResource("5_m5gs4")]
+transform = Transform3D(0.864187, 0, 0.5031708, 0, 1, 0, -0.5031708, 0, 0.864187, 0.7174398, 0.21578047, 0.0066712983)
+
+[node name="trough_long2" parent="." instance=ExtResource("6_jgcfn")]
+transform = Transform3D(-0.98098564, 0, 0.19408032, 0, 1, 0, -0.19408032, 0, -0.98098564, 0.4283199, 0, -0.670403)
+
+[node name="tree_single_A2" parent="." instance=ExtResource("7_ug1nn")]
+transform = Transform3D(0.8660254, 0, -0.5, 0, 1, 0, 0.5, 0, 0.8660254, -0.5510217, 0, -0.8134851)
+
+[node name="tree_single_A_cut2" parent="." instance=ExtResource("8_0503g")]
+transform = Transform3D(0.8660254, 0, -0.5, 0, 1, 0, 0.5, 0, 0.8660254, 0.875406, 0, 0.2232671)
+
+[node name="tree_single_A3" parent="." instance=ExtResource("7_ug1nn")]
+transform = Transform3D(0.8660254, 0, -0.5, 0, 1, 0, 0.5, 0, 0.8660254, 0.7411584, 0, 0.60380757)

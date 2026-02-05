@@ -1,0 +1,19 @@
+[gd_resource type="Theme" load_steps=5 format=3 uid="uid://25nmgx4xnunw"]
+
+[ext_resource type="Texture2D" uid="uid://dkhajwy6qi0nq" path="res://assets/ui/Transparent center/panel-transparent-center-001.png" id="1_lt6qc"]
+[ext_resource type="Texture2D" uid="uid://c7kmeipcvsoh7" path="res://assets/Icons/Pixel Art RPG/Food/Beer.png" id="1_upgs5"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_upgs5"]
+texture = ExtResource("1_lt6qc")
+texture_margin_left = 20.328642
+texture_margin_top = 19.627655
+texture_margin_right = 19.97815
+texture_margin_bottom = 20.328642
+modulate_color = Color(0, 0, 0, 0.3647059)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4nese"]
+
+[resource]
+FoldableContainer/icons/expanded_arrow = ExtResource("1_upgs5")
+FoldableContainer/styles/panel = SubResource("StyleBoxTexture_upgs5")
+PanelContainer/styles/panel = SubResource("StyleBoxEmpty_4nese")

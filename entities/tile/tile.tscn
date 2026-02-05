@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://htwa4tx6vc76"]
+
+[ext_resource type="Script" uid="uid://efuho3u7mtb2" path="res://entities/tile/tile.gd" id="1_tile"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_xkrdj"]
+
+[node name="Tile" type="Node3D"]
+script = ExtResource("1_tile")
+
+[node name="TerrainAnchor" type="Node3D" parent="."]
+metadata/_edit_lock_ = true
+
+[node name="DistrictAnchor" type="Node3D" parent="."]
+metadata/_edit_lock_ = true
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+shape = SubResource("BoxShape3D_xkrdj")

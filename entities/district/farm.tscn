@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://53ih7c47djjc"]
+
+[ext_resource type="PackedScene" uid="uid://c36rkb5p6m5tt" path="res://assets/buildings/neutral/building_grain.gltf" id="1_gn4tn"]
+
+[node name="Farm" type="Node3D"]
+transform = Transform3D(0.8660254, 0, 0.5, 0, 1, 0, -0.5, 0, 0.8660254, 0, 0, 0)
+
+[node name="building_grain2" parent="." instance=ExtResource("1_gn4tn")]

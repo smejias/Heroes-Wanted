@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="DistrictData" load_steps=3 format=3 uid="uid://market"]
+
+[ext_resource type="PackedScene" uid="uid://drnhxq1ubidkb" path="res://entities/district/market.tscn" id="1_2pk7i"]
+[ext_resource type="Script" uid="uid://dklfdyu36y5uf" path="res://data/district_data.gd" id="1_script"]
+
+[resource]
+script = ExtResource("1_script")
+id = &"market"
+display_name = "Market"
+description = "Converts materials into gold through trade."
+type = 4
+scene = ExtResource("1_2pk7i")
+construction_time = 15.0
+gold_cost = 150
+materials_cost = 80
+gold_production = 25
+materials_consumption = 10
+quest_spawn_chance = 0.2

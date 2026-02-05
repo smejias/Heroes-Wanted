@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://ds5or0hyaxaar"]
+
+[ext_resource type="PackedScene" uid="uid://co6i0upugqh2p" path="res://assets/tiles-hexes/models/hex_grass.gltf" id="1_nxrfn"]
+[ext_resource type="Shader" uid="uid://c2w0x2nsumvbq" path="res://assets/shaders/grass/grass_terrain.gdshader" id="2_qohan"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_xladb"]
+render_priority = 0
+shader = ExtResource("2_qohan")
+shader_parameter/grass_color = Color(0.3, 0.6, 0.2, 1)
+shader_parameter/grass_color_alt = Color(0.28, 0.52, 0.2, 1)
+shader_parameter/wind_highlight = Color(0.6, 0.85, 0.4, 1)
+shader_parameter/wind_speed = 1.0
+shader_parameter/wind_strength = 0.08
+shader_parameter/wind_direction = Vector2(1, 1)
+shader_parameter/grass_line_strength = 0.08
+shader_parameter/building_position = Vector3(0, 0, 0)
+shader_parameter/ao_radius = 0.6
+shader_parameter/ao_strength = 0.4
+
+[node name="hex_grass2" instance=ExtResource("1_nxrfn")]
+transform = Transform3D(0.8660254, 0, 0.5, 0, 1, 0, -0.5, 0, 0.8660254, 0, 0, 0)
+
+[node name="hex_grass" parent="." index="0"]
+material_override = SubResource("ShaderMaterial_xladb")

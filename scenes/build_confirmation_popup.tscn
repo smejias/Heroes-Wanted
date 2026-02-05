@@ -1,0 +1,69 @@
+[gd_scene format=3 uid="uid://gjkh3p7atpuc"]
+
+[ext_resource type="Script" uid="uid://dwilnmr8l8sbo" path="res://scenes/build_confirmation_popup.gd" id="1_y842g"]
+
+[node name="BuildConfirmationPopup" type="PanelContainer" unique_id=302077496]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -56.0
+offset_top = -20.0
+offset_right = 56.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+script = ExtResource("1_y842g")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1930036675]
+custom_minimum_size = Vector2(300, 200)
+layout_mode = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=888618000]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="Title" type="Label" parent="MarginContainer/VBoxContainer" unique_id=1960208248]
+layout_mode = 2
+text = "Are you sure?"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HSeparator" type="HSeparator" parent="MarginContainer/VBoxContainer" unique_id=606028718]
+layout_mode = 2
+
+[node name="DistrictNameLabel" type="Label" parent="MarginContainer/VBoxContainer" unique_id=1241805758]
+unique_name_in_owner = true
+layout_mode = 2
+text = "district_name"
+horizontal_alignment = 1
+
+[node name="CostLabel" type="Label" parent="MarginContainer/VBoxContainer" unique_id=1439302726]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Cost"
+horizontal_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=751782956]
+layout_mode = 2
+size_flags_vertical = 10
+theme_override_constants/separation = 8
+alignment = 1
+
+[node name="CancelButton" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer" unique_id=2129789584]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(150, 50)
+layout_mode = 2
+text = "Cancel"
+
+[node name="ConfirmButton" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer" unique_id=1069673648]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(150, 50)
+layout_mode = 2
+text = "Build"

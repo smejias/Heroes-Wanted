@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="DistrictData" load_steps=3 format=3 uid="uid://mine"]
+
+[ext_resource type="Script" uid="uid://dklfdyu36y5uf" path="res://data/district_data.gd" id="1_script"]
+[ext_resource type="PackedScene" uid="uid://c8bwj4kefiq4i" path="res://entities/district/mine.tscn" id="1_uoxfc"]
+
+[resource]
+script = ExtResource("1_script")
+id = &"mine"
+display_name = "Mine"
+description = "Extracts materials from the earth."
+type = 3
+scene = ExtResource("1_uoxfc")
+build_radius = 1
+construction_time = 12.0
+gold_cost = 120
+materials_cost = 20
+materials_production = 20
+quest_spawn_chance = 0.35
+required_terrain_tag = "MOUNTAIN"
+has_terrain_requirement = true

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bqy4ul6vo5fgk"
+path="res://.godot/imported/3. Darkwood Path.mp3-db763dbbb863a76f53bb89bf7a383c31.mp3str"
+
+[deps]
+
+source_file="res://assets/music/3. Darkwood Path.mp3"
+dest_files=["res://.godot/imported/3. Darkwood Path.mp3-db763dbbb863a76f53bb89bf7a383c31.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

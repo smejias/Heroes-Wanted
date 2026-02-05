@@ -1,0 +1,38 @@
+[gd_scene load_steps=7 format=3 uid="uid://bx8hhawhx56nd"]
+
+[ext_resource type="PackedScene" uid="uid://doupks4s2qk46" path="res://assets/buildings/blue/building_home_A_blue.gltf" id="2_2qydq"]
+[ext_resource type="PackedScene" uid="uid://b8t0pkcwxi82w" path="res://assets/props/barrel.gltf" id="3_agn1q"]
+[ext_resource type="PackedScene" uid="uid://dfxd6l6r2kfny" path="res://assets/props/bucket_empty.gltf" id="4_863o0"]
+[ext_resource type="PackedScene" uid="uid://dwpuxbdo11a1s" path="res://assets/props/crate_A_big.gltf" id="5_gv2hn"]
+[ext_resource type="PackedScene" uid="uid://c5s3kptvonaef" path="res://assets/props/crate_A_small.gltf" id="6_uot28"]
+[ext_resource type="PackedScene" uid="uid://dv4onha318u6x" path="res://assets/props/sack.gltf" id="7_e1bgh"]
+
+[node name="Housing" type="Node3D"]
+transform = Transform3D(0.8660254, 0, 0.5, 0, 1, 0, -0.5, 0, 0.8660254, 0, 0, 0)
+
+[node name="building_home_A_blue2" parent="." instance=ExtResource("2_2qydq")]
+transform = Transform3D(0.5681303, 0, -0.4089351, 0, 0.7, 0, 0.4089351, 0, 0.5681303, 0.58442885, -1.1920929e-07, -0.18951052)
+
+[node name="building_home_A_blue4" parent="." instance=ExtResource("2_2qydq")]
+transform = Transform3D(0.17125323, 0, 0.67872846, 0, 0.7, 0, -0.67872846, 0, 0.17125323, -0.6621522, -1.1920929e-07, 0.06503156)
+
+[node name="building_home_A_blue5" parent="." instance=ExtResource("2_2qydq")]
+transform = Transform3D(-0.6998575, 0, -0.01412221, 0, 0.7, 0, 0.01412221, 0, -0.6998575, 0.006906403, -1.1920929e-07, 0.59573376)
+
+[node name="building_home_A_blue3" parent="." instance=ExtResource("2_2qydq")]
+transform = Transform3D(0.69874024, 0, -0.041977912, 0, 0.7, 0, 0.041977912, 0, 0.69874024, -0.028525148, 0, -0.63072085)
+
+[node name="barrel2" parent="." instance=ExtResource("3_agn1q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.6482537, 0, 0.44237065)
+
+[node name="bucket_empty2" parent="." instance=ExtResource("4_863o0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.74921453, 0, 0.16892111)
+
+[node name="crate_A_big2" parent="." instance=ExtResource("5_gv2hn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5578828, 0, -0.5493047)
+
+[node name="crate_A_small2" parent="." instance=ExtResource("6_uot28")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.499211, 0, -0.32379925)
+
+[node name="sack2" parent="." instance=ExtResource("7_e1bgh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.6346047, 0, 0.29130697)

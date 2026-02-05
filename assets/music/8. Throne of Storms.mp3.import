@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://da4b2sjc8a0it"
+path="res://.godot/imported/8. Throne of Storms.mp3-9c7b19d34636e41827a19d22cbd78950.mp3str"
+
+[deps]
+
+source_file="res://assets/music/8. Throne of Storms.mp3"
+dest_files=["res://.godot/imported/8. Throne of Storms.mp3-9c7b19d34636e41827a19d22cbd78950.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

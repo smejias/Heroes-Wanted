@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="QuestData" load_steps=2 format=3 uid="uid://dblvfw0n2heyg"]
+
+[ext_resource type="Script" uid="uid://v3qrgvl2otge" path="res://data/quest_data.gd" id="1_tntmy"]
+
+[resource]
+script = ExtResource("1_tntmy")
+id = &"quest_a_easy"
+display_name = "Rat Catchers"
+description = "lalala"
+gold_reward = 200
+metadata/_custom_type_script = "uid://v3qrgvl2otge"

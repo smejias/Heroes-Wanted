@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cx2xfv8x4g7ry"
+path="res://.godot/imported/6. Silverbrook.mp3-b2bb91e7a5bebcc154f57682a0d7197d.mp3str"
+
+[deps]
+
+source_file="res://assets/music/6. Silverbrook.mp3"
+dest_files=["res://.godot/imported/6. Silverbrook.mp3-b2bb91e7a5bebcc154f57682a0d7197d.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://c7h1riro3h25p"]
+
+[ext_resource type="PackedScene" uid="uid://ctmvh444jld5o" path="res://assets/tiles-hexes/models/hex_water.gltf" id="1_v5xcb"]
+
+[node name="hex_water2" instance=ExtResource("1_v5xcb")]

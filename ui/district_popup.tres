@@ -1,0 +1,14 @@
+[gd_resource type="Theme" format=3 uid="uid://da13t15ky4gvr"]
+
+[ext_resource type="Texture2D" uid="uid://bn1jwl5xrde7n" path="res://assets/ui/Panel/panel-009.png" id="1_1pdu1"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8cvbb"]
+texture = ExtResource("1_1pdu1")
+texture_margin_left = 20.202847
+texture_margin_top = 19.788206
+texture_margin_right = 20.051079
+texture_margin_bottom = 19.875832
+modulate_color = Color(0.12941177, 0.12941177, 0.12941177, 0.5647059)
+
+[resource]
+PanelContainer/styles/panel = SubResource("StyleBoxTexture_8cvbb")

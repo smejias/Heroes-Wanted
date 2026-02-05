@@ -1,0 +1,26 @@
+[gd_resource type="Resource" script_class="DistrictData" load_steps=5 format=3 uid="uid://dt2pwgs8s5jq6"]
+
+[ext_resource type="Script" uid="uid://v3qrgvl2otge" path="res://data/quest_data.gd" id="1_7bcp2"]
+[ext_resource type="Resource" uid="uid://dblvfw0n2heyg" path="res://entities/quests/quest_A.tres" id="2_plw25"]
+[ext_resource type="PackedScene" uid="uid://d3xpf5kc06fpj" path="res://entities/district/tavern.tscn" id="3_6mpia"]
+[ext_resource type="Script" uid="uid://dklfdyu36y5uf" path="res://data/district_data.gd" id="4_x0dol"]
+
+[resource]
+script = ExtResource("4_x0dol")
+id = &"tavern"
+display_name = "Tavern"
+description = "More ale means more heroes!"
+type = 5
+scene = ExtResource("3_6mpia")
+build_radius = 1
+construction_time = 8.0
+gold_cost = 200
+materials_cost = 100
+work_end_hour = 24
+gold_production = 10
+housing_capacity = 10
+food_consumption = 10
+possible_quests = Array[ExtResource("1_7bcp2")]([ExtResource("2_plw25")])
+appeal_bonus = 10
+max_parties_bonus = 2
+stay_duration_bonus = 1

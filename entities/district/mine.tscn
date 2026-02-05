@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://c8bwj4kefiq4i"]
+
+[ext_resource type="PackedScene" uid="uid://c4ijwdluw4xvr" path="res://assets/buildings/blue/building_mine_blue.gltf" id="1_ghss6"]
+
+[node name="Mine" type="Node3D"]
+
+[node name="building_mine_blue2" parent="." instance=ExtResource("1_ghss6")]
