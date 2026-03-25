@@ -1,0 +1,126 @@
+[gd_scene format=3 uid="uid://c5t1g4nrr3gxj"]
+
+[ext_resource type="Texture2D" uid="uid://dal41s0gugoqj" path="res://assets/ui/Buttons/build_button_normal.png" id="1_0jnm8"]
+[ext_resource type="Texture2D" uid="uid://b8g4tpkgvbdyi" path="res://assets/ui/Buttons/quest_button.png" id="2_0jnm8"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_8woaa"]
+load_path = "res://.godot/imported/build_button_normal.png-b4bed6849834793890daf24b089cb190.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_w850e"]
+load_path = "res://.godot/imported/quest_button_normal.png-f0e67397ee506986ba543e43e4009a73.ctex"
+
+[node name="MainHud" type="Control" unique_id=1409021837]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset_ratio = Vector2(0.5, 0.5)
+
+[node name="BottomMenuBar" type="HBoxContainer" parent="." unique_id=1516531033]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -450.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="MainBottomMenu" type="PanelContainer" parent="BottomMenuBar" unique_id=1189420856]
+custom_minimum_size = Vector2(60, 215)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+
+[node name="MarginContainer" type="MarginContainer" parent="BottomMenuBar/MainBottomMenu" unique_id=821660772]
+layout_mode = 2
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="VBoxContainer" type="VBoxContainer" parent="BottomMenuBar/MainBottomMenu/MarginContainer" unique_id=545928136]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="BuildButton" type="TextureButton" parent="BottomMenuBar/MainBottomMenu/MarginContainer/VBoxContainer" unique_id=738699649]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture_normal = ExtResource("1_0jnm8")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="QuestsButton" type="TextureButton" parent="BottomMenuBar/MainBottomMenu/MarginContainer/VBoxContainer" unique_id=102379496]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture_normal = ExtResource("2_0jnm8")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="SecondaryBottomMenu" type="PanelContainer" parent="BottomMenuBar" unique_id=1960947139]
+custom_minimum_size = Vector2(60, 190)
+layout_mode = 2
+size_flags_vertical = 8
+
+[node name="MarginContainer" type="MarginContainer" parent="BottomMenuBar/SecondaryBottomMenu" unique_id=242341845]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="VBoxContainer" type="VBoxContainer" parent="BottomMenuBar/SecondaryBottomMenu/MarginContainer" unique_id=314142681]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="BuildButton" type="TextureButton" parent="BottomMenuBar/SecondaryBottomMenu/MarginContainer/VBoxContainer" unique_id=929429986]
+custom_minimum_size = Vector2(35, 35)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture_normal = SubResource("CompressedTexture2D_8woaa")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="QuestsButton" type="TextureButton" parent="BottomMenuBar/SecondaryBottomMenu/MarginContainer/VBoxContainer" unique_id=2041773250]
+custom_minimum_size = Vector2(35, 35)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture_normal = SubResource("CompressedTexture2D_w850e")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="BuildButton2" type="TextureButton" parent="BottomMenuBar/SecondaryBottomMenu/MarginContainer/VBoxContainer" unique_id=1807529034]
+custom_minimum_size = Vector2(35, 35)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture_normal = SubResource("CompressedTexture2D_8woaa")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="QuestsButton2" type="TextureButton" parent="BottomMenuBar/SecondaryBottomMenu/MarginContainer/VBoxContainer" unique_id=470385106]
+custom_minimum_size = Vector2(35, 35)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture_normal = SubResource("CompressedTexture2D_w850e")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="DistrictsContainer" type="PanelContainer" parent="BottomMenuBar" unique_id=1191939544]
+custom_minimum_size = Vector2(0, 150)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 8
+
+[node name="DistrictList" type="HBoxContainer" parent="BottomMenuBar/DistrictsContainer" unique_id=451936725]
+custom_minimum_size = Vector2(0, 150)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8

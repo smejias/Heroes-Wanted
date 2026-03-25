@@ -1,0 +1,125 @@
+[gd_scene format=3 uid="uid://j1r7v6a5qjg"]
+
+[ext_resource type="Texture2D" uid="uid://br7bklgxbp5id" path="res://assets/ui/Buttons/Vector.png" id="1_jwn0t"]
+
+[node name="VBoxContainer" type="VBoxContainer" unique_id=2133756155]
+custom_minimum_size = Vector2(180, 150)
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -150.0
+offset_right = 180.0
+grow_vertical = 0
+size_flags_horizontal = 0
+size_flags_vertical = 8
+
+[node name="District_Details" type="PanelContainer" parent="." unique_id=1100174367]
+custom_minimum_size = Vector2(180, 300)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 8
+
+[node name="MarginContainer" type="MarginContainer" parent="District_Details" unique_id=1485817658]
+custom_minimum_size = Vector2(180, 300)
+layout_mode = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="VBoxContainer" type="VBoxContainer" parent="District_Details/MarginContainer" unique_id=1537105573]
+layout_mode = 2
+
+[node name="CostTitle" type="Label" parent="District_Details/MarginContainer/VBoxContainer" unique_id=1598815225]
+layout_mode = 2
+text = "COST"
+
+[node name="CostContainer" type="HBoxContainer" parent="District_Details/MarginContainer/VBoxContainer" unique_id=1926043653]
+layout_mode = 2
+
+[node name="Label" type="RichTextLabel" parent="District_Details/MarginContainer/VBoxContainer/CostContainer" unique_id=2084050729]
+layout_mode = 2
+text = "INPUT"
+vertical_alignment = 1
+
+[node name="Label2" type="RichTextLabel" parent="District_Details/MarginContainer/VBoxContainer/CostContainer" unique_id=1032828112]
+layout_mode = 2
+size_flags_horizontal = 10
+text = "OUTPUT"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="HSeparator" type="HSeparator" parent="District_Details/MarginContainer/VBoxContainer" unique_id=1839023208]
+layout_mode = 2
+
+[node name="InputOutputTitle" type="HBoxContainer" parent="District_Details/MarginContainer/VBoxContainer" unique_id=400225522]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="District_Details/MarginContainer/VBoxContainer/InputOutputTitle" unique_id=1816270063]
+layout_mode = 2
+text = "INPUT"
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="District_Details/MarginContainer/VBoxContainer/InputOutputTitle" unique_id=464118493]
+layout_mode = 2
+size_flags_horizontal = 10
+text = "OUTPUT"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="InputOutputContainer" type="HBoxContainer" parent="District_Details/MarginContainer/VBoxContainer" unique_id=790967278]
+layout_mode = 2
+
+[node name="Label" type="RichTextLabel" parent="District_Details/MarginContainer/VBoxContainer/InputOutputContainer" unique_id=1881075464]
+layout_mode = 2
+text = "INPUT"
+vertical_alignment = 1
+
+[node name="Label2" type="RichTextLabel" parent="District_Details/MarginContainer/VBoxContainer/InputOutputContainer" unique_id=1603273786]
+layout_mode = 2
+size_flags_horizontal = 10
+text = "OUTPUT"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="HSeparator2" type="HSeparator" parent="District_Details/MarginContainer/VBoxContainer" unique_id=1846420751]
+layout_mode = 2
+
+[node name="DistrictDescription" type="Label" parent="District_Details/MarginContainer/VBoxContainer" unique_id=145075169]
+custom_minimum_size = Vector2(157, 139)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+text = "Lorem ipsum dolor sit amet consectetur adipiscing elit, enim tellus lacinia felis habitant pretium nibh, eros purus massa per posuere euismod. Nam vestibulum magnis"
+autowrap_mode = 3
+
+[node name="DistrictButton" type="PanelContainer" parent="." unique_id=1831302253]
+custom_minimum_size = Vector2(180, 150)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 10
+
+[node name="MarginContainer" type="MarginContainer" parent="DistrictButton" unique_id=1571987959]
+layout_mode = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="VBoxContainer" type="VBoxContainer" parent="DistrictButton/MarginContainer" unique_id=635628290]
+layout_mode = 2
+alignment = 2
+
+[node name="TextureRect" type="TextureRect" parent="DistrictButton/MarginContainer/VBoxContainer" unique_id=608503309]
+custom_minimum_size = Vector2(120, 90)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("1_jwn0t")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="DistrictButton/MarginContainer/VBoxContainer" unique_id=1538462477]
+layout_mode = 2
+text = "DISTRICT_NAME"
+horizontal_alignment = 1
+vertical_alignment = 1

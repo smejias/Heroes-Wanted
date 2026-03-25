@@ -2120,7 +2120,6 @@ icon = SubResource("ImageTexture_2wyq8")
 
 [node name="BuildPanel" type="PanelContainer" parent="HUD/VSplitContainer" unique_id=1536158996]
 unique_name_in_owner = true
-visible = false
 layout_mode = 2
 script = ExtResource("12_eb6dy")
 
